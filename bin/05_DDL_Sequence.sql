@@ -15,7 +15,21 @@
 create sequence book_seq start with 1 increment by 1;
 
 -- 테이블에 레코드를 추가합니다
-insert into booklist values( book_seq.nextVal, '일곱해의 마지막' 2020, 12150, 2000, 'all');
-insert into booklist values( book_seq.nextVal, '봉제인형 살인사건' 2019, 13150, 2000, '18');
-insert into booklist values( book_seq.nextVal, '쇼코의 미소' 2023, 13420, 2000, '12l');
+insert into booklist values( book_seq.nextVal, '일곱해의 마지막', 2020, 12150, 2000, 'all');
+insert into booklist values( book_seq.nextVal, '봉제인형 살인사건', 2019, 13150, 2000, '18');
+insert into booklist values( book_seq.nextVal, '쇼코의 미소', 2023, 13420, 2000, '12');
 
+select * from booklist;
+
+-- [3] 시퀀스 수정 : 최대 증가값을 14까지로 제한
+alter sequence book_seq maxvalue 14;
+
+-- [4] 시퀀스 삭제
+drop sequence book_seq;
+
+-- [5] 시퀀스 재생성 : 다음 숫자부터 시작하게 하여 기존 레코드와 중복 되지 않게 합니다
+create sequence book_seq start with 15 increment by 1;
+
+-- 1부터 1씩 늘어나는 member_seq rent_seq를 생성해주세요
+create sequence member_seq start with 1 increment by 1;
+create sequence rent_seq start with 1 increment by 1;
