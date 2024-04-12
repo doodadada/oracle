@@ -60,12 +60,12 @@ where a.sal between b.losal and b.hisal;
 
 --outer join
 -- 조인조건에 만족하지 못해서 해당결과를 출력시에 누락이 되는 문제점이 발생할 때 해당 레코드를 출력하는 조인
-select a booknum, a.subject, b.rentdate from booklist a, rentlist b
+select a.booknum, a.subject, b.rentdate from booklist a, rentlist b
 where a.booknum = b.bnum(+);
 
 -- emp 테이블에는 depno가 40인 레코드가 하나도 없습니다. 그래서 조인된 결과에는 40번 부서의 이름도 loc도 표시가 안됩니다
 select * from emp a, dept b
-where a.depno(+)=b.deptno;
+where a.deptno(+)=b.deptno;
 
 -- Ansi join
 
@@ -77,10 +77,10 @@ where a.deptno = b.deptno;
 -- ansi inner join
 -- ansi 이너 조인의 표현 방식
 select ename, dname
-from emp inner join dept on emp.deptno=deptno;
+from emp inner join dept on emp.deptno=dept.deptno;
 
 select ename, dname
-from emp inner join dept on using(deptno);
+from emp inner join dept using(deptno);
 
 -- Ansi outer join 표현방식
 select * from emp right outer join dept on emp.deptno = dept.deptno;
