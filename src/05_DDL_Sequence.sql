@@ -13,6 +13,7 @@
 
 -- [1] 시퀀스의 생성
 create sequence book_seq start with 1 increment by 1;
+create sequence 시퀀스명 start with 초기값 increment by 증가량;
 
 -- 테이블에 레코드를 추가합니다
 insert into booklist values( book_seq.nextVal, '일곱해의 마지막', 2020, 12150, 2000, 'all');
@@ -33,3 +34,7 @@ create sequence book_seq start with 15 increment by 1;
 -- 1부터 1씩 늘어나는 member_seq rent_seq를 생성해주세요
 create sequence member_seq start with 1 increment by 1;
 create sequence rent_seq start with 1 increment by 1;
+
+
+
+
