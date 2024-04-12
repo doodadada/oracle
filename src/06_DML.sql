@@ -86,9 +86,10 @@ insert into rentlist values(rent_seq.nextVal,'2023/10/01', 10,6,300);
 insert into rentlist values(rent_seq.nextVal,'2020/11/18',  11,7,100);
 insert into rentlist values(rent_seq.nextVal,'2018/09/02',13,9,100);
 insert into rentlist values(rent_seq.nextVal,'2024/10/01', 16,10,100);
-insert into rentlist values(rent_seq.nextVal,'2020/06/23',14,12,100);
+insert into rentlist values(rent_seq.nextVal,'2020/06/23',6,5,100);
 
 select * from rentlist;
+select * from booklist;
 
 commit -- 현재창에서 commit은 세미콜른은 붙이지 않습니다. 단일명령이고 다른 명령과 함께 사용하지 않는다는 뜻입니다.
 

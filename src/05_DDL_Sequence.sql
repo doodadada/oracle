@@ -35,6 +35,9 @@ create sequence book_seq start with 15 increment by 1;
 create sequence member_seq start with 1 increment by 1;
 create sequence rent_seq start with 1 increment by 1;
 
+drop sequence member_seq;
+drop sequence rent_seq;
+drop sequence book_seq;
 
 
 
