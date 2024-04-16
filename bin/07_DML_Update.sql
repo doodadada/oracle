@@ -79,3 +79,9 @@ foreign key(bnum) references booklist(booknum) on delete cascade;
 alter table rentlist drop constraint fk2;
 alter table rentlist add constraint fk2
 foreign key (mnum) references memberlist(membernum) on delete cascade;
+
+--update booklist set rentprice = 1935 where booknum = 8;
+update booklist set grade = 'all' where booknum=11;
+select * from booklist;
+
+delete from booklist where booknum=14;

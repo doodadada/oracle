@@ -31,3 +31,5 @@ where a.bnum=b.booknum and a.mnum=c.membernum;
 
 select * from MEMBERLIST;
 select * from report;
+
+select * from booklist;

@@ -28,6 +28,10 @@ create table MemberList(
 	constraint member_pk primary key (memberNum) 
 );
 
+alter table memberlist modify Bpoint default 0;
+update MEMBERLIST set Bpoint = 0 where Bpoint is null;
+select * from MEMBERLIST;
+
 create table rentlist(
 	numseq number(3), --대여기록번호
 	rentdate date default sysdate, --대여날짜
@@ -56,9 +60,9 @@ insert into booklist values (book_seq.nextVal,'이것이 자바다', 2017,30000,
 insert into booklist values (book_seq.nextVal,'불변의 법칙', 2024,22500,2250,'all');
 insert into booklist values (book_seq.nextVal,'일류의 조건', 2024,17820,1780,'12');
 insert into booklist values (book_seq.nextVal,'모순', 2013,11700,1100,'18');
-insert into booklist values (book_seq.nextVal,'코믹 메이플스토리 5권',2008,8500,850,'all');
-insert into booklist values (book_seq.nextVal,'마법 천자문 6권',2008,7000,700,'all');
-insert into booklist values (book_seq.nextVal,'국어사전', 2000,15000,500,'all');
+insert into booklist values (book_seq.nextVal,'코믹 메이플스토리 5권',2008,18500,1850,'all');
+insert into booklist values (book_seq.nextVal,'마법 천자문 6권',2008,17000,1700,'all');
+insert into booklist values (book_seq.nextVal,'국어사전', 2000,15000,1500,'all');
 
 --memberlist 값 10개 추가 (본인의 insert구문 사용해도 괜찮음)
 insert into memberlist(membernum, name, phone) values(member_seq.nextVal,'홍길동','010-1111-2222');
